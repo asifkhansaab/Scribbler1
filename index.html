@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriBBler</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/common.css" type="text/css">
+    <link rel="stylesheet" href="styles/index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <div class="header-container">
+        <div class="header">
+            <div class="logo-container">
+                <h1 class="logo" style="font-family: 'Montez', cursive;">ScriBBler</h1>
+                <div class="logo-subheading" style="color: black;">Explore, Imagine, Create</div>
+            </div>
+            <div class="header-buttons">
+                <input class="header-button" type="button" onclick="openSignUpModal()" value="Sign Up">
+                <input class="header-button" type="button" onclick="openSignInModal()" value="Sign In">
+            </div>
+        </div>
+    </div>
+    <!-- Main buttons -->
+    <div class="post-buttons-container">
+        <button class="post-button" type="button" onclick="displayAllPosts()">All Posts</button>
+        <button class="post-button" type="button" onclick="openCreatePostModal()">Create Post</button>
+    </div>
+    <!-- Signup Modal -->
+<div id="signupModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeSignUpModal()"><i class="fas fa-times"></i></span>
+        <h2 class="modal-title">Get Started</h2>
+        <div class="modal-input">
+            <input type="text" placeholder="Name">
+        </div>
+        <div class="modal-input">
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="modal-input">
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="modal-input">
+            <input type="password" placeholder="Confirm Password">
+        </div>
+        <button class="modal-button" onclick="submitSignUp()">Sign Up</button>
+    </div>
+</div>
+
+   <!-- Signin Modal -->
+<div id="signInModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeSignInModal()"><i class="fas fa-times"></i></span>
+        <h2 class="modal-title">Welcome Back!</h2>
+        <div class="modal-input">
+            <input type="text" placeholder="Enter your username">
+        </div>
+        <div class="modal-input">
+            <input type="password" placeholder="Enter your password">
+        </div>
+        <button class="modal-button" onclick="submitSignIn()">Sign In</button>
+    </div>
+</div>
+
+    <!-- Delete Post Modal -->
+    <div id="deletePostModal" class="modal">
+        <!-- Modal content for delete post -->
+    </div>
+    <script src="../scripts/postslist.js"></script>
+    <script src="../scripts/common.js"></script>
+</body>
+</html>
